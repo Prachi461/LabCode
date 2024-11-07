@@ -1,0 +1,22 @@
+package ControlStatement;
+
+public class start1to5right {
+
+    public static void main(String[] args) {
+        int i, j, k;
+
+        // Outer loop to handle the number of rows (from 1 to 5)
+        for (i = 1; i <= 5; i++) {
+            // Inner loop to print spaces for right alignment
+            for (j = 1; j <= 5 - i; j++) {
+                System.out.print("\t");  // Prints a tab space for alignment
+            }
+            // Inner loop to print stars for each row
+            for (k = 1; k <= i; k++) {
+                System.out.print("*" + "\t");  // Prints a star followed by a tab
+            }
+            // Move to the next line after each row
+            System.out.println();
+        }
+    }
+}
