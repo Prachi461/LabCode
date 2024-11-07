@@ -1,0 +1,51 @@
+package Prachi;
+
+public class Bank {
+
+    private double amount;
+
+    // Parameterized constructor to initialize the amount with 10000
+    public Bank(double amount) {
+        this.amount = amount;
+    }
+
+    // Method to withdraw money
+    public void withdraw(double withdrawalAmount) {
+        // Use a ternary operator to check if withdrawal can proceed
+        String result = (withdrawalAmount <= amount) 
+                ? "Withdraw successful." 
+                : "Insufficient funds.";
+        
+        // If withdrawal is successful, update the amount
+        amount = (withdrawalAmount <= amount) ? amount - withdrawalAmount : amount;
+        
+        System.out.println(result);
+    }
+
+    // Method to deposit money
+    public void deposit(double depositAmount) {
+        amount += depositAmount;
+        System.out.println("Deposit successful.");
+    }
+
+    // Method to display the total balance
+    public void displayBalance() {
+        System.out.println("Total Balance: " + amount);
+    }
+
+    // Main method to test the Bank class
+    public static void main(String[] args) {
+        // Initialize the Bank account with 10000
+        Bank account = new Bank(10000);
+        
+        // Perform a withdrawal
+        account.withdraw(2000); // Example withdrawal amount
+        
+        // Deposit 5000 into the account
+        account.deposit(5000);
+        
+        // Display the total balance
+        account.displayBalance();
+    }
+
+}
