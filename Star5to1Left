@@ -1,0 +1,16 @@
+package ControlStatement;
+
+public class Star5to1Left {
+
+    public static void main(String[] args) {
+
+        int i, j;
+        for (i = 5; i >= 1; i--) {
+            // Print stars
+            for (j = 1; j <= i; j++) {
+                System.out.print("*" + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
