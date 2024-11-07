@@ -1,0 +1,45 @@
+package Prachi;
+
+class Employee {
+    // Fields for Employee details
+    String name;
+    double salary;
+    int age;
+
+    // Constructor to initialize Employee object
+    public Employee(String name, double salary, int age) {
+        this.name = name;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    // Method to display Employee details
+    public void displayEmployeeDetails() {
+        System.out.println("Name: " + name + ", Salary: $" + salary + ", Age: " + age);
+    }
+}
+
+
+public class EmployeeDetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        // Creating an array of 5 Employee objects
+        Employee[] employees = new Employee[5];
+
+        // Initializing Employee objects with sample data
+        employees[0] = new Employee("Alice", 55000, 30);
+        employees[1] = new Employee("Bob", 62000, 40);
+        employees[2] = new Employee("Charlie", 48000, 28);
+        employees[3] = new Employee("Diana", 70000, 35);
+        employees[4] = new Employee("Evan", 53000, 26);
+
+        // Displaying each Employee's details
+        System.out.println("Employee Details:");
+        for (Employee emp : employees) {
+            emp.displayEmployeeDetails();
+        }
+
+	}
+
+}
